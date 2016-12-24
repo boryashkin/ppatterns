@@ -6,4 +6,4 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 
 # Strategy pattern
 
-Demonstrated on the example of application SimUDuck
+Demonstrated on the example of SimUDuck application
