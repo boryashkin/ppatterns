@@ -1,0 +1,18 @@
+{
+  "name": "Patterns",
+  "authors": [
+    {
+      "name": "Boris Desyatsky",
+      "email": "mail@borisd.ru",
+      "homepage": "http://borisd.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ppatterns\\strategy\\": "app/strategy"
+    }
+  },
+  "require": {
+    "php": ">=5.5.9"
+  }
+}
