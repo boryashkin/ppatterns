@@ -6,9 +6,6 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 
 */web/index.php - Front-controller of the app*
 
-## Patterns:
-[Strategy](../../tree/strategy) - Duck app as example
+# Strategy pattern
 
-[Observer](../../tree/observer) - Weather station with custom observer realization
-
-[Observer](../../tree/observer-2) - Weather station with SPL observer realization
+Demonstrated on the example of Starbuzz application
