@@ -6,6 +6,6 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 
 */web/index.php - Front-controller of the app*
 
-# Strategy pattern
+# Decorator pattern
 
 Demonstrated on the example of Starbuzz application
