@@ -2,18 +2,30 @@
 
 namespace Ppatterns\observer\classes\elements;
 
+use Ppatterns\observer\classes\subjects\WeatherData;
 use Ppatterns\observer\interfaces\DisplayElement;
-use Ppatterns\observer\interfaces\Observer;
 
-class StatisticsDisplay implements Observer, DisplayElement
+class StatisticsDisplay implements \SplObserver, DisplayElement
 {
-    public function update($temp, $humidity, $pressure)
+    /**
+     * @var WeatherData
+     */
+    private $weatherData;
+
+    public function __construct(WeatherData $weatherData)
     {
-        // TODO: Implement update() method.
+        $this->weatherData = $weatherData;
+        $this->weatherData->attach($this);
+    }
+
+    public function update(\SplSubject $observable)
+    {
+        $this->display();
     }
 
     public function display()
     {
         /* statistics */
+        echo 'Statistics will be there soon';
     }
 }

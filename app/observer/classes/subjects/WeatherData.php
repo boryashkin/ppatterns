@@ -2,58 +2,59 @@
 
 namespace Ppatterns\observer\classes\subjects;
 
-use Ppatterns\observer\interfaces\Observer;
-use Ppatterns\observer\interfaces\Subject;
+use Ppatterns\observer\abstracts\Observable;
+use SplObserver;
 
-class WeatherData implements Subject
+class WeatherData extends Observable
 {
-    /**
-     * @var Observer[]
-     */
-    private $arrayList = [];
-    /**
-     * @var float
-     */
+    /** @var  float */
     private $temperature;
-    /**
-     * @var float
-     */
+
+    /** @var  float */
     private $humidity;
-    /**
-     * @var float
-     */
+
+    /** @var  float */
     private $pressure;
 
-    public function registerObserver(Observer $o)
+    /** @var bool */
+    private $changed = false;
+
+    /**
+     * @return float
+     */
+    public function getTemperature()
     {
-        $this->arrayList[] = $o;
+        return $this->temperature;
     }
 
-    public function removeObserver(Observer $o)
+    /**
+     * @return float
+     */
+    public function getHumidity()
     {
-        if ($key = array_search($o, $this->arrayList)) {
-            unset($this->arrayList[$key]);
-        }
+        return $this->humidity;
     }
 
-    public function notifyObservers()
+    /**
+     * @return float
+     */
+    public function getPressure()
     {
-        foreach ($this->arrayList as $observer) {
-            $observer->update($this->temperature, $this->humidity, $this->pressure);
-        }
+        return $this->pressure;
     }
 
     public function measurementsChanged()
     {
-        $this->notifyObservers();
+        $this->setChanged();
+        $this->notify();
     }
 
     public function setMeasurements($temperature, $humidity, $pressure)
     {
-        $this->temperature = (float)$temperature;
-        $this->humidity = (float)$humidity;
-        $this->pressure = (float)$pressure;
-        
+        $this->temperature = $temperature;
+        $this->humidity = $humidity;
+        $this->pressure = $pressure;
+
         $this->measurementsChanged();
     }
 }

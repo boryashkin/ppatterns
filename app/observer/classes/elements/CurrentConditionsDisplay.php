@@ -2,14 +2,15 @@
 
 namespace Ppatterns\observer\classes\elements;
 
+use Ppatterns\observer\classes\subjects\WeatherData;
 use Ppatterns\observer\interfaces\DisplayElement;
-use Ppatterns\observer\interfaces\Observer;
-use Ppatterns\observer\interfaces\Subject;
+use SplSubject;
+use SplObserver;
 
-class CurrentConditionsDisplay implements Observer, DisplayElement
+class CurrentConditionsDisplay implements SplObserver, DisplayElement
 {
     /**
-     * @var Subject
+     * @var WeatherData
      */
     private $weatherData;
     /**
@@ -21,16 +22,17 @@ class CurrentConditionsDisplay implements Observer, DisplayElement
      */
     private $humidity;
 
-    public function __construct(Subject $weatherData)
+    public function __construct(WeatherData $weatherData)
     {
         $this->weatherData = $weatherData;
-        $this->weatherData->registerObserver($this);
+        $this->weatherData->attach($this);
     }
 
-    public function update($temp, $humidity, $pressure)
+    public function update(SplSubject $observer)
     {
-        $this->temperature = $temp;
-        $this->humidity = $humidity;
+        /** @var WeatherData $observer */
+        $this->temperature = $this->weatherData->getTemperature();
+        $this->humidity = $this->weatherData->getHumidity();
         $this->display();
     }
 

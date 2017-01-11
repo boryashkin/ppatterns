@@ -6,5 +6,5 @@ require(__DIR__ . '/../vendor/autoload.php');
 
 
 $test = new \Ppatterns\observer\classes\sources\WeatherStation();
-
 $test->main([]);
+
