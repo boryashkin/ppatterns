@@ -13,11 +13,15 @@ abstract class PizzaStore
      * Corporate technology
      * @param $type
      * @return Pizza
+     * @throws \Exception
      */
     final public function orderPizza($type)
     {
         /** @var Pizza $pizza */
         $pizza = $this->createPizza($type);
+        if (!$pizza instanceof Pizza) {
+            throw new \Exception('Illegal argument received!');
+        }
         $pizza->prepare();
         $pizza->bake();
         $pizza->cut();
