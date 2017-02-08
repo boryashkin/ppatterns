@@ -1,13 +1,18 @@
 <?php
 
-namespace Ppatterns\factory\classes;
+namespace Ppatterns\factory\abstracts;
 
 /**
  * Default Pizza
  * @package Ppatterns\factory\classes
  */
-class Pizza
+abstract class Pizza
 {
+    private function getName()
+    {
+        return static::class;
+    }
+
     public function prepare()
     {
         echo 'preparing...';
@@ -25,6 +30,6 @@ class Pizza
 
     public function box()
     {
-        echo 'packing...';
+        echo "packing... Your {$this->getName()} is done";
     }
 }
