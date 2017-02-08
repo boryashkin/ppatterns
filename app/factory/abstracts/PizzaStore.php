@@ -33,7 +33,7 @@ abstract class PizzaStore
     /**
      * Factory method
      * @param $type
-     * @return mixed
+     * @return Pizza
      */
     abstract public function createPizza($type);
 }
