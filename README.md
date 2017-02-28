@@ -14,3 +14,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 [Observer](../../tree/observer-2) - Weather station with SPL observer realization
 
 [Decorator](../../tree/decorator) - Starbuzz coffee application
+
+[Factory method](../../tree/factory) - Pizza factory application
