@@ -6,6 +6,6 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 
 */web/index.php - Front-controller of the app*
 
-# Factory method pattern
+# Abstract factory pattern
 
 Demonstrated on the example of Pizza factory application
