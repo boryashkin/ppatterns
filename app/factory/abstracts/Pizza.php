@@ -4,6 +4,7 @@ namespace Ppatterns\factory\abstracts;
 
 use Ppatterns\factory\interfaces\Cheese;
 use Ppatterns\factory\interfaces\Dough;
+use Ppatterns\factory\interfaces\PizzaIngredientFactory;
 use Ppatterns\factory\interfaces\Sauce;
 
 /**
@@ -12,6 +13,8 @@ use Ppatterns\factory\interfaces\Sauce;
  */
 abstract class Pizza
 {
+    /** @var PizzaIngredientFactory */
+    public $ingredientFactory;
     /** @var Dough */
     public $dough;
     /** @var Sauce */
@@ -19,7 +22,12 @@ abstract class Pizza
     /** @var Cheese */
     public $cheese;
 
-    private function getName()
+    public function __construct(PizzaIngredientFactory $ingredientFactory)
+    {
+        $this->ingredientFactory = $ingredientFactory;
+    }
+
+    public function getName()
     {
         return static::class;
     }

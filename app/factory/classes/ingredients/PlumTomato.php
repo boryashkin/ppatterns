@@ -10,6 +10,6 @@ class PlumTomato extends Sauce
 
     public function spill()
     {
-        echo 'red sauce';
+        echo 'red sauce ';
     }
 }

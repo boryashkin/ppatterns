@@ -9,3 +9,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 # Abstract factory pattern
 
 Demonstrated on the example of Pizza factory application
+
+Pizza factory with abstract factory for ingredients

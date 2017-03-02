@@ -10,6 +10,6 @@ class ThickCrust extends Dough
 
     public function swell()
     {
-        echo 'stick';
+        echo 'stick ';
     }
 }

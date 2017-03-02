@@ -3,6 +3,7 @@
 namespace Ppatterns\factory\classes\stores;
 
 use Ppatterns\factory\abstracts\PizzaStore;
+use Ppatterns\factory\classes\factories\NyPizzaIngredientFactory;
 use Ppatterns\factory\classes\pizzas\ch\CheesePizza;
 use Ppatterns\factory\classes\pizzas\ch\GreekPizza;
 use Ppatterns\factory\classes\pizzas\ch\PepperoniPizza;
@@ -16,6 +17,8 @@ class ChicagoStylePizzaStore extends PizzaStore
     /** @inheritdoc */
     public function createPizza($type)
     {
+        $ingredientFactory = new NyPizzaIngredientFactory();
+
         switch ($type) {
             case 'cheese':
                 $pizza = CheesePizza::class;
@@ -27,6 +30,6 @@ class ChicagoStylePizzaStore extends PizzaStore
                 $pizza = GreekPizza::class;
         }
 
-        return new $pizza;
+        return new $pizza($ingredientFactory);
     }
 }

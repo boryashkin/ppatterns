@@ -10,6 +10,6 @@ class Mozarella extends Cheese
 
     public function melt()
     {
-        echo 'too much';
+        echo 'too much ';
     }
 }
