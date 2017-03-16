@@ -18,3 +18,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 [Factory method](../../tree/factory) - Pizza factory application
 
 [Abstract factory](../../tree/factory-abstract) - Abstract factory for ingredients for pizza
+
+[Singleton](../../tree/singleton) - Chocolate boiler as singleton
