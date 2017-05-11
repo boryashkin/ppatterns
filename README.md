@@ -22,3 +22,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 [Singleton](../../tree/singleton) - Chocolate boiler as singleton
 
 [Command](../../tree/command) - Simple remote control as command
+
+[Command](../../tree/command-2) - Multislot remote control + macro command
