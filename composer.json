@@ -9,7 +9,8 @@
   ],
   "autoload": {
     "psr-4": {
-
+      "Ppatterns\\command\\": "app/command",
+      "Ppatterns\\tests\\command\\": "tests/command"
     }
   },
   "require": {
