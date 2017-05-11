@@ -13,6 +13,8 @@ class RemoteControl
     protected $onCommands;
     /** @var Command[] */
     protected $offCommands;
+    /** @var Command */
+    protected $undoCommand;
 
     public function __construct()
     {
@@ -30,16 +32,24 @@ class RemoteControl
         $this->offCommands[$slot] = $offCommand;
     }
 
-    public function onButtonWasPressed($slot)
+    public function onButtonWasPushed($slot)
     {
         $this->validateSlot($slot);
         $this->onCommands[$slot]->execute();
+        $this->undoCommand = $this->onCommands[$slot];
     }
 
-    public function offButtonWasPressed($slot)
+    public function offButtonWasPushed($slot)
     {
         $this->validateSlot($slot);
         $this->offCommands[$slot]->execute();
+        $this->undoCommand = $this->offCommands[$slot];
+    }
+
+    public function undoButtonWasPushed()
+    {
+        echo "\"undo\" blink!\n";
+        $this->undoCommand->undo();
     }
 
     public function __toString()

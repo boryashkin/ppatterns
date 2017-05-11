@@ -10,4 +10,9 @@ class NoCommand implements Command
     {
 
     }
+
+    public function undo()
+    {
+
+    }
 }
