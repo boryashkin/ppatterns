@@ -9,9 +9,9 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 ## Patterns:
 [Strategy](../../tree/strategy) - Duck app as example
 
-[Observer](../../tree/observer) - Weather station with custom observer realization
+[Observer](../../tree/observer) - Weather station with custom observer implementation
 
-[Observer](../../tree/observer-2) - Weather station with SPL observer realization
+[Observer](../../tree/observer-2) - Weather station with SPL observer implementation
 
 [Decorator](../../tree/decorator) - Starbuzz coffee application
 
