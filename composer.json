@@ -9,7 +9,8 @@
   ],
   "autoload": {
     "psr-4": {
-
+      "Ppatterns\\adapter\\": "app/adapter",
+      "Ppatterns\\tests\\adapter\\": "tests/adapter"
     }
   },
   "require": {
