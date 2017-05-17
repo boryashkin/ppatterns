@@ -26,3 +26,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 [Command](../../tree/command-2) - Multislot remote control + macro command
 
 [Adapter](../../tree/adapter) - Turkey-duck adaptation
+
+[Facade](../../tree/facade) - Home theater difficulties
