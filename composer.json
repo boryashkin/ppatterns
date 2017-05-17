@@ -9,7 +9,8 @@
   ],
   "autoload": {
     "psr-4": {
-
+      "Ppatterns\\facade\\": "app/facade",
+      "Ppatterns\\tests\\facade\\": "tests/facade"
     }
   },
   "require": {
