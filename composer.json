@@ -9,7 +9,8 @@
   ],
   "autoload": {
     "psr-4": {
-
+      "Ppatterns\\templateMethod\\": "app/templateMethod",
+      "Ppatterns\\tests\\templateMethod\\": "tests/templateMethod"
     }
   },
   "require": {
