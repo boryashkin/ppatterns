@@ -28,3 +28,5 @@ Code examples from O'Reilly book "Design Patterns in Java" rewritten in PHP.
 [Adapter](../../tree/adapter) - Turkey-duck adaptation
 
 [Facade](../../tree/facade) - Home theater difficulties
+
+[Template method](../../tree/template-method) - Similar recipes
